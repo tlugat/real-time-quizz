@@ -1,0 +1,69 @@
+<script setup>
+import styled from 'vue3-styled-components'
+import Text from '@/components/Text'
+
+const props = defineProps({
+    username : String
+})
+
+const Wrapper = styled.div`
+  position : fixed;
+  display: flex;
+  width: 40rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  gap: 2rem;
+  border: 2px solid var(--black);
+  background: var(--primary);
+  ${({ theme }) => theme.mediaQueries.desktopAndUp} {
+    bottom : 0;
+    right : 0;
+  }
+
+
+`
+const Icone = styled.div`
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--black);
+  background: var(--white);
+`
+</script>
+
+<template lang="">
+  <Wrapper>
+    <Icone>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <mask id="path-1-inside-1_12_4115" fill="white">
+          <path
+            d="M21 19V20H3V19L5 17V11C5 7.9 7.03 5.17 10 4.29V4C10 3.46957 10.2107 2.96086 10.5858 2.58579C10.9609 2.21071 11.4696 2 12 2C12.5304 2 13.0391 2.21071 13.4142 2.58579C13.7893 2.96086 14 3.46957 14 4V4.29C16.97 5.17 19 7.9 19 11V17L21 19ZM14 21C14 21.5304 13.7893 22.0391 13.4142 22.4142C13.0391 22.7893 12.5304 23 12 23C11.4696 23 10.9609 22.7893 10.5858 22.4142C10.2107 22.0391 10 21.5304 10 21"
+          />
+        </mask>
+        <path
+          d="M21 19V20H3V19L5 17V11C5 7.9 7.03 5.17 10 4.29V4C10 3.46957 10.2107 2.96086 10.5858 2.58579C10.9609 2.21071 11.4696 2 12 2C12.5304 2 13.0391 2.21071 13.4142 2.58579C13.7893 2.96086 14 3.46957 14 4V4.29C16.97 5.17 19 7.9 19 11V17L21 19ZM14 21C14 21.5304 13.7893 22.0391 13.4142 22.4142C13.0391 22.7893 12.5304 23 12 23C11.4696 23 10.9609 22.7893 10.5858 22.4142C10.2107 22.0391 10 21.5304 10 21"
+          fill="#467966"
+        />
+        <path
+          d="M21 19H23V18.1716L22.4142 17.5858L21 19ZM21 20V22H23V20H21ZM3 20H1V22H3V20ZM3 19L1.58579 17.5858L1 18.1716V19H3ZM5 17L6.41421 18.4142L7 17.8284V17H5ZM10 4.29L10.5682 6.2076L12 5.78335V4.29H10ZM12 2L12 0L12 2ZM14 4.29H12V5.78335L13.4318 6.2076L14 4.29ZM19 17H17V17.8284L17.5858 18.4142L19 17ZM19 19V20H23V19H19ZM21 18H3V22H21V18ZM5 20V19H1V20H5ZM4.41421 20.4142L6.41421 18.4142L3.58579 15.5858L1.58579 17.5858L4.41421 20.4142ZM7 17V11H3V17H7ZM7 11C7 8.78151 8.45146 6.83477 10.5682 6.2076L9.43182 2.3724C5.60854 3.50523 3 7.01849 3 11H7ZM12 4.29V4H8V4.29H12ZM12 4L12 4L9.17157 1.17157C8.42143 1.92172 8 2.93913 8 4H12ZM12 4L12 4L12 0C10.9391 0 9.92172 0.421427 9.17157 1.17157L12 4ZM12 4L12 4L14.8284 1.17157C14.0783 0.421427 13.0609 0 12 0L12 4ZM12 4L12 4H16C16 2.93913 15.5786 1.92172 14.8284 1.17157L12 4ZM12 4V4.29H16V4H12ZM13.4318 6.2076C15.5485 6.83477 17 8.78151 17 11H21C21 7.01849 18.3915 3.50523 14.5682 2.3724L13.4318 6.2076ZM17 11V17H21V11H17ZM17.5858 18.4142L19.5858 20.4142L22.4142 17.5858L20.4142 15.5858L17.5858 18.4142ZM12 21L12 21L14.8284 23.8284C15.5786 23.0783 16 22.0609 16 21H12ZM12 21L12 21V25C13.0609 25 14.0783 24.5786 14.8284 23.8284L12 21ZM12 21L12 21L9.17157 23.8284C9.92172 24.5786 10.9391 25 12 25V21ZM12 21L12 21H8C8 22.0609 8.42143 23.0783 9.17157 23.8284L12 21Z"
+          fill="#111111"
+          mask="url(#path-1-inside-1_12_4115)"
+        />
+      </svg>
+    </Icone>
+    <Text variant="p" color="--beige">
+      <b> Votre amis "{{username}}" a bien été ajouté dans la partie ! </b></Text
+    >
+  </Wrapper>
+</template>
+
+<style lang=""></style>
